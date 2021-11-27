@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <div fxLayout="row" fxLayoutAlign="space-between" fxFlex >
+    <div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <div>
+          <button mat-icon-button (click)="toggleMenu()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div>
+          <a class="mat-h2" mat-button (click)="goHome()">Manifest 369</a>
+          <!-- <button mat-flat-button>Manifest CRM</button> -->
+          <!-- <a (click)="goHome()">Manifest 369</a> -->
+        </div>
+      </div>
+    </div>
+    <div>
+      <app-user-tool-bar></app-user-tool-bar>
+    </div>
+  </div>
+</mat-toolbar>
+

@@ -1,0 +1,39 @@
+@use '@angular/material' as mat;
+@use './functions' as f;
+
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$deep-purple-palette, 500);
+$my-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+
+$my-theme: mat.define-dark-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent
+ )
+));
+
+@include mat.all-component-themes($my-theme);
+
+//changes the app's background color and i set this in index.js for body element
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// ###################################
+// CUSTOMIZATIONS
+// ###################################
+
+.mat-app-background {
+  background-color: black;
+}
+
+
+.m-mat-card{
+  background-color: black;
+
+}
+
+// ###################################

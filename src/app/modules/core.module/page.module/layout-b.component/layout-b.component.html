@@ -1,0 +1,28 @@
+<!--
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="showSideMenu">
+    <app-side-menu></app-side-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-tool-bar></app-tool-bar>
+    <div class="content" @fadeInOut>
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="showSideMenu">
+    <app-side-menu></app-side-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-tool-bar></app-tool-bar>
+    <div class="content" @fadetwoAnimation>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

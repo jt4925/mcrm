@@ -1,0 +1,45 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="ctn">
+  <div>
+    <button mat-button [matMenuTriggerFor]="menu" class="user-name-button">
+      <mat-icon>account_circle</mat-icon>
+      <span class="mat-h3" style="margin-left:8px;">{{firstName}} {{lastName}}</span>
+      <mat-icon>expand_more</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" style="width:100%;">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item (click)="logOut()" >Log Out</button>
+    </mat-menu>
+  </div>
+</div>
+
+
+
+
+
+<!-- <div fxLayout="row" fxLayoutAlign="center center">
+  <div>
+    <button mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+  <div class="mat-h3 user-name">James Tayi</div>
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>expand_more</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon fontSet="fa" fontIcon="fa-id-card"></mat-icon>
+        <span>Profile</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Link 1</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Link 2</span>
+      </button>
+    </mat-menu>
+  </div>
+</div> -->
