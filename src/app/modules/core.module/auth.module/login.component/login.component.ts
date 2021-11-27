@@ -22,7 +22,7 @@ export class LoginComponent {
 
   }
 
-  onLogin(form: NgForm) {
+  onLogin2(form: NgForm) {
     // console.log('form value is: ',form.value);
     // console.log('form.value.email value is: ',form.value.email);
     // console.log("email is: ", this.email);
@@ -50,15 +50,16 @@ export class LoginComponent {
         this.authService.setAuthStatusListenerNextValue(true);
         this.isLoading = false;
         console.log('check5')
-        this.router.navigate(['/featurea']);
+        this.router.navigate(['/dashboard']);
         console.log('check6')
         console.log('authService.token is: ', this.authService.getToken())
       });
     }, 0);
 
+  }
 
-
-
+  onLogin(form: NgForm){
+    this.router.navigate(['/dashboard']);
   }
 
 //   onLogin2(form: NgForm){
