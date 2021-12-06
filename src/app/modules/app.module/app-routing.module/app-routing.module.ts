@@ -12,6 +12,7 @@ import { AuthGuard } from '../../../common/services/auth-guard.service';
 import { LoggedOutComponent } from '../../features.module/logged-out.component/logged-out.component';
 import { FeatureAComponent } from '../../features.module/feature-a.component/feature-a.component';
 
+
 // const routes: Route[] = [{
 //     path: '',
 //     pathMatch: 'full',
@@ -82,19 +83,25 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutAComponent,
+    data: {
+      animation: 'layouta'
+    },
     children: [
-      { path: '', component: LoginComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'splash', component: SplashComponent },
-      { path: 'loggedout', component: LoggedOutComponent }
+      // { path: '', component: LoginComponent },
+      { path: 'login', component: LoginComponent, data: { animation: 'login' }},
+      { path: 'splash', component: SplashComponent, data: { animation: 'splash' }},
+      { path: 'loggedout', component: LoggedOutComponent, data: { animation: 'loggedout'} }
     ]
   },
   {
     path: '',
     component: LayoutBComponent,
+    data: {
+      animation: 'layoutb'
+    },
     children: [
-      { path: 'dashboard', component: DashboardComponent},
-      { path: 'featurea', component: FeatureAComponent, }
+      { path: 'dashboard', component: DashboardComponent, data: { animation: 'dashboard' }, },
+      { path: 'featurea', component: FeatureAComponent, data: { animation: 'featurea' },  }
     ]
   },
 // for production use authguard

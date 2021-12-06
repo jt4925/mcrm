@@ -21,14 +21,11 @@
 
   <mat-sidenav-content>
     <app-tool-bar></app-tool-bar>
-
-    <!-- <div class="content">
-        <div @fadeAnimation>
-          <router-outlet></router-outlet>
-        </div>
-    </div> -->
-    <div class="content" @fadeAnimation>
+    <div [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+    <!-- <div class="content" @fadeAnimation>
       <router-outlet></router-outlet>
-  </div>
+  </div> -->
   </mat-sidenav-content>
 </mat-sidenav-container>
