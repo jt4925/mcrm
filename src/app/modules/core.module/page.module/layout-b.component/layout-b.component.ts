@@ -3,14 +3,14 @@ import { PageService } from '../../../../common/services/page.service';
 import { Input } from '@angular/core';
 import { trigger, animate, transition, state, style, query } from '@angular/animations';
 import { RouterOutlet } from '@angular/router';
-import { fadetwoAnimation } from '../../../../common/animations/fadetwo.animation';
+import { fadeAnimation } from '../../../../common/animations/fade.animation';
 
 
 @Component({
   selector: 'app-layout-b',
   templateUrl: './layout-b.component.html',
   styleUrls: ['./layout-b.component.scss'],
-  animations: [fadetwoAnimation]
+  animations: [fadeAnimation]
 })
 export class LayoutBComponent implements OnInit {
   showSideMenu = true;

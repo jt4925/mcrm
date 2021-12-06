@@ -6,7 +6,7 @@ import { ProductsComponent } from './products.component/products.component';
 import { DashboardComponent } from './dashboard.component/dashboard.component';
 import { LoggedOutComponent } from './logged-out.component/logged-out.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FeatureAComponent } from './feature-a/feature-a.component';
+import { FeatureAComponent } from './feature-a.component/feature-a.component';
 
 @NgModule({
   declarations: [

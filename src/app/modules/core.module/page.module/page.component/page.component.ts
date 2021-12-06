@@ -20,24 +20,24 @@ export class PageComponent implements OnInit {
   constructor(private router: Router, private pageService: PageService) {}
 
   ngOnInit(): void {
-    this.router.events.subscribe((data) => {
-      if (data instanceof RoutesRecognized) {
+    // this.router.events.subscribe((data) => {
+    //   if (data instanceof RoutesRecognized) {
 
-        if(data.state.root.firstChild) {
+    //     if(data.state.root.firstChild) {
 
-          let routeData = data.state.root.firstChild.data;
+    //       let routeData = data.state.root.firstChild.data;
 
-          this.page.title = routeData['title'];
-          this.page.name = routeData['name'];
-          this.page.route = routeData['route'];
-          this.page.layoutType = routeData['layoutType'];
+    //       this.page.title = routeData['title'];
+    //       this.page.name = routeData['name'];
+    //       this.page.route = routeData['route'];
+    //       // this.page.layoutType = routeData['layoutType'];
 
-          console.log('setting page service with : ', this.page);
-          this.pageService.setPage(this.page)
+    //       console.log('setting page service with : ', this.page);
+    //       this.pageService.setPage(this.page)
 
-        }
-      }
-    });
+    //     }
+    //   }
+    // });
 
   }
 
