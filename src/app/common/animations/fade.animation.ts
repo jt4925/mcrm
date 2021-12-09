@@ -9,6 +9,7 @@ import {
 } from '@angular/animations';
 
 
+
 export const routeAnimation =
 trigger('routeAnimations', [
   transition(
@@ -17,15 +18,18 @@ trigger('routeAnimations', [
       query(':enter, :leave', [
         style({
           position: 'absolute',
-          opacity: '0'
+          width: '100%',
+          height: '100%',
+          opacity: '0',
         })
       ], { optional: true }),
 
       query(':enter', [
-        animate('0.3s', style({
+        animate('.3s', style({
           opacity: '1',
         }))
       ], { optional: true }),
     ]
   ),
+
 ])
